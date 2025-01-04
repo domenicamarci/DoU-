@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do you love me?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f4f8;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .yes {
+            background-color: #ff80ab;
+            color: white;
+        }
+        .no {
+            background-color: #b0bec5;
+            color: white;
+        }
+        .hearts {
+            font-size: 2rem;
+            color: #ff4081;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .hearts img {
+            width: 50px;
+            height: 50px;
+        }
+        #carti-img {
+            margin-top: 20px;
+            width: 200px;
+            border-radius: 10px;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .black-screen {
+            background-color: black;
+            color: white;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Do you love me?</h1>
+    <div class="buttons">
+        <button class="yes" onclick="showLove()">Yes</button>
+        <button class="no" onclick="showNo()">No</button>
+    </div>
+    <div id="response"></div>
+
+    <script>
+        function showLove() {
+            document.body.innerHTML = `
+                <h1>Me 2 apple pie!!!!</h1>
+                <div class="hearts">❤️❤️❤️❤️❤️❤️❤️</div>
+                <img id="carti-img" src="https://upload.wikimedia.org/wikipedia/commons/0/04/Playboi_Carti_2019.png" alt="Playboi Carti"/>
+            `;
+        }
+
+        function showNo() {
+            document.body.innerHTML = `
+                <div class="black-screen">
+                    👍<br> You won’t go to Bocconi
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
